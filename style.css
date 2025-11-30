@@ -1,0 +1,775 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.body{
+    background-color: black;
+}
+.hidden{
+    display: none;
+}
+.main{
+    padding: 0;
+    background-image: url("img/main-bg.jpg");
+    background-position: center center;
+    height: 95vh;
+    width: 100%;
+    margin: 0px auto;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+
+}
+.main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black); /* change to white if needed */
+  z-index: 5;
+}
+.box{
+    height: 95vh;
+    width: 100%;
+    opacity: 0.55;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    margin: 0px auto;
+}
+
+nav{
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+nav img{
+    width: 170px;
+    z-index: 10;
+}
+nav .buttons{
+    z-index: 100;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+.hero{
+
+    height: 100%;
+    width: 100%;
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:"Martel Sans", sans-serif;
+
+}
+.hero>:first-child{
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+.hero>:nth-child(2){
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+.hero>:nth-child(3){
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero>:nth-child(4){
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media(max-width: 381px){
+   .hero>:first-child{
+        font-size: 3px;
+   } 
+}
+
+
+
+.login{
+    padding-top: 20px;
+}
+
+select {
+    padding: 9px 30px 9px 15px; /* Less right-padding = arrow comes closer */
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.395);
+    border: 1px solid gray;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+
+    /* Reset native dropdown styling */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+}
+
+
+.btn-red{
+    padding: 10px 18px;
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn-red:hover{
+    background-color: rgb(202, 7, 7);
+}
+.email{
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 230px;
+    padding-left: 20px;
+    background-color: transparent;
+    font-size: 15px;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.gs{
+    padding: 19px 30px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.gs:hover{
+    background-color: rgb(202, 7, 7);
+}
+
+@media(max-width: 800px){
+    .box{
+        opacity: 0.65;
+    }
+    .hero>:first-child{
+        font-weight: 900;
+        font-size: 3rem;
+    }
+    .hero>:nth-child(2){
+        font-weight: 900;
+        font-size: 3rem;
+    }
+.hero>:nth-child(3){
+        font-weight: 500;
+        font-size: 0.75rem;
+        padding-bottom: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+.hero>:nth-child(4){
+        font-weight: 400;
+        font-size: 0.7rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+}
+
+
+@media(max-width: 650px){
+    .box{
+        opacity: 0.7;
+    }
+    .hero>:first-child{
+        font-weight: 900;
+        font-size: 25px;
+    }
+    .hero>:nth-child(2){
+        font-weight: 900;
+        font-size: 25px;
+    }
+.hero>:nth-child(3){
+        font-weight: 500;
+        font-size: 12px;
+        padding-bottom: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+.hero>:nth-child(4){
+        font-weight: 400;
+        font-size: 11px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .email{
+        padding: 15px 44px;
+    background-color: transparent;
+    font-size: 15px;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.gs{
+    padding: 15px 9px;
+    font-size: 17px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+}
+@media(max-width: 600px){
+    .box{
+        opacity: 0.8;
+    }
+    nav{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav img{
+        width: 110px;
+        
+}
+
+.btn-red{
+    white-space: nowrap;
+}
+    .hero>:first-child{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    .hero>:nth-child(2){
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    .hero>:nth-child(3){
+        font-weight: 500;
+        font-size: 0.75rem;
+        padding-bottom: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .hero>:nth-child(4){
+        font-weight: 400;
+        font-size: 0.7rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .email{
+        padding: 15px 40px;
+    background-color: transparent;
+    font-size: 15px;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    .gs{
+    padding: 15px 20px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+}
+.moon-curve {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 0px;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 2;
+  overflow: visible;
+}
+
+.moon-curve svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+
+}
+.moon-curve .glow {
+  filter: blur(25px); /* This is what gives it the "misty" glow */
+  opacity: 0.9;
+  z-index: 10;
+  overflow: visible;
+}
+.second-hero{
+    z-index: 0;
+    padding-top: 100px;
+    background-color: black;
+    position: relative;
+}
+.layer1{
+    position: relative;
+    padding-top: 70px;
+}
+.trend span{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    padding-left: 160px;
+    font-family:"Martel Sans", sans-serif;
+}
+
+.posters{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 70px;
+}
+
+.posts{
+    height: 270px;
+    width: 200px;
+    background-size: cover;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+.posts:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+    z-index: 100000;
+}
+.p1{
+    background-image: url("img/poster1.jpeg");
+}
+.p2{
+    background-image: url("img/poster2.jpg");
+}
+.p3{
+    background-image: url("img/poster3.jpg");
+}
+.p4{
+    background-image: url("img/poster4.jpg");
+}
+.p5{
+    background-image: url("img/poster5.jpg");
+}
+
+/*.video-space{
+    text-align: center;
+    height: auto;
+    width: 20rem;
+    background-color: red;
+    border-radius: 0.9rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 6rem;
+    z-index: 200000;
+}*/
+
+.video-space {
+    position: fixed;        /* we'll position relative to viewport */
+    width: 20rem;
+    max-width: calc(100vw - 40px);
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 0.9rem;
+    text-align: center;
+    z-index: 999999;
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    overflow: hidden;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.video-space video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    outline: none;
+}
+.video-space.show {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+
+.layer2 span{
+    padding-top: 15px;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    padding-left: 160px;
+    font-family:"Martel Sans", sans-serif;
+}
+.reason-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.box1{
+    height: 260px;
+    width: 255px;
+    background: linear-gradient(135deg, #0f0f31, #2a1850, #3b0f3e);
+    border-radius: 10px;
+    position: relative;
+    padding: 25px;
+
+}
+.box1:hover{
+    opacity: 0.8;
+}
+@media(max-width: 750px){
+    .posters{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        gap: 10px;
+        width: 100%;
+        padding: 10px;
+        scroll-behavior: smooth;
+        justify-content: flex-start;
+    }
+    .posts{
+        flex: 0 0 auto; /* Prevents shrinking and allows horizontal flow */
+        width:  180px;
+        height: 250px;
+        background-color: lightblue;
+        border: 1px solid #ccc;
+    }
+    .layer2 span{
+        padding-top: 50px;
+    }
+    .reason-box{
+    
+    gap: 15px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    }
+    .box1{
+    height: 200px;
+    width: 400px;
+    background: linear-gradient(135deg, #0f0f31, #2a1850, #3b0f3e);
+    border-radius: 10px;
+    position: relative;
+    padding: 25px;
+    }
+
+}
+.headin{
+    font-family: "Martel Sans", sans-serif;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+.under{
+    font-family: "Martel Sans", sans-serif;
+    color: #bbbac2;
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+}
+.emoji{
+    font-size: 40px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+@media(max-width:500px){
+        .box1{
+            height: 180px;
+            width: 280px;
+        }
+        .headin{
+            font-size: 22px;
+        }
+        .under{
+            font-size: 12px;
+        }
+    }
+.ly3{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    padding: 160px;
+    font-family:"Martel Sans", sans-serif;
+}
+
+.dropdowns{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.dbox1{
+    height: 90px;
+    width: 1230px;
+    background-color: #2d2d2d;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    gap: 900px;
+    transition: 0.6s;
+    cursor: pointer;
+    position: relative;
+
+}
+.dbox1:hover{
+    background-color: #414141;
+}
+
+.dbox1 span{
+    font-size: 25px;
+    font-family: "Martel Sans", sans-serif;
+    color: white;
+    position: absolute;
+    left: 10px;
+}
+.plus{
+    font-size: 45px;
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    right: 10px;
+}
+@media(max-width: 1500px){
+    .trend span{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .layer2 span{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .ly3{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+    .dbox1{
+        width: 1000px;
+        height: 80px;
+    }
+
+}
+@media(max-width: 1200px){
+    .dbox1{
+        width: 700px;
+        height: 70px;
+    }
+    .dbox1 span{
+        font-size: 20px;
+    }
+    .plus{
+        font-size: 20px;
+    }
+}
+
+footer span{
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.final-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+}
+.final{
+    width: 650px;
+}
+
+@media(max-width:900px){
+    .dbox1{
+        width: 500px;
+        height: 60px;
+    }
+    .dbox1 span{
+        font-size: 18px;
+    }
+    .plus{
+        font-size: 18px;
+    }
+    .final{
+        width: 280px;
+        padding: 20px 0px;
+    }
+    .foot-ops{
+        display: block;
+}
+}
+@media(max-width: 650px){
+    .final-login span{
+        text-align: center;
+        font-size: 18px;
+    }
+    .dbox1{
+        width: 250px;
+        height: 50px;
+    }
+    .dbox1 span{
+        font-size: 12px;
+    }
+    .plus{
+        font-size: 12px;
+    }
+
+}
+.number{
+    font-size: 18px;
+    color: #949296;
+    padding-left: 160px;
+    padding-top: 50px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.number span{
+    color: #949296;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 18px;
+}
+.foot-ops li{
+    font-size: 16px;
+    color: #949296;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.foot-ops{
+    display: flex;
+    gap: 85px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 160px;
+    padding-top: 50px;
+}
+@media(max-width: 550px){
+    .number{
+        font-size: 12px;
+        padding: 20px 0px;
+        text-align: center;
+    }
+}
+@media(max-width: 1200px){
+    .foot-ops{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 30px 0px;
+    }
+}
+.foot-lang{
+    margin-left: 160px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.low-head span{
+    font-size: 15px;
+    color: #949296;
+    font-weight: 700;
+    margin-left: 160px;
+    font-family: "Martel Sans", sans-serif;
+}
+.final-line{
+    font-size: 15px;
+    color: #949296;
+    padding-top: 15px;
+    margin-left: 160px;
+    font-family: "Martel Sans", sans-serif;
+}
+.final-line a{
+    text-decoration: underline;
+    color: rgb(53, 53, 179);
+}
+@media(max-width: 1100px){
+    .foot-lang{
+        display: block;
+        margin: 0px auto;
+    }
+    .low-head span{
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .final-line{
+        display: block;
+        margin: 0px;
+        text-align: center;
+    }
+}
+@media (max-width: 550px) {
+    .foot-ops {
+        justify-content: center !important;
+        padding-left: 0 !important;
+        text-align: center;
+    }
+    .foot-ops li {
+    text-align: center;
+    width: 100%; /* or set a max-width */
+}
+
+}
+
